@@ -1,0 +1,15 @@
+.form-control {
+  margin-top: 4px;
+}
+textarea {
+  resize: none;
+}
+.checkbox {
+  margin-right: 12px;
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 22px;
+  }
+}
