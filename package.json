@@ -1,16 +1,23 @@
 {
   "name": "mean-blog",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "My blog.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "Kyle Johnson",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.7",
     "express": "^4.15.3",
-    "mongoose": "^4.10.8"
+    "express-session": "^1.15.5",
+    "mongoose": "^4.10.8",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
   }
 }

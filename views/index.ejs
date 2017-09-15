@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html class="no-js" lang="en" ng-app="BlogApp">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KJ | Web Developer</title>
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/my-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body class="primary-font">
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-2195009-2', 'auto');
+      ga('send', 'pageview');
+
+      ga('create', 'UA-2195009-27', 'auto', {name: "foundation"});
+      ga('foundation.send', 'pageview');
+  </script>
+
+  <div class="top-bar secondary">
+    <div class="top-bar-left">
+      <ul class="menu secondary">
+        <li class="menu-text">KJ</li>
+        <li><a href="#" class="secondary">Blog</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout large primary">
+    <div class="row column">
+      <h1 class="primary">Kyle Johnson<span class="subhead">Web Developer</span></h1>
+      <p class="subheader primary">Hi, I'm Kyle, your front-end web developer! Well, I'm your guy if you're looking for a friendly, talented front-end web developer. Feel free to check out my recent work and if you have any questions, please contact me.</p>
+      <a href="https://github.com/11kyle?tab=repositories"><img src="img/github.svg" alt="github" height="48" width="48"></a>
+      <a href="http://www.linkedin.com/in/kylejohnson11"><img src="img/linkedin.svg" alt="linkedin" height="48" width="48"></a>
+    </div>
+  </div>
+
+  <div class="row medium-8 large-7 columns" ng-controller="BlogController">
+    <div class="blog-post" ng-repeat="post in posts | orderBy: '-posted'">
+      <h3 class="primary-font">{{ post.title }} <small>{{ post.posted | date : 'EEEE, MMM d, y h:mm a' }}</small></h3>
+      <p>Author: <a href="#">{{ post.author }}</a></p>
+      <!--<img class="thumbnail" src="img/sample-image.jpg">-->
+      <p class="post-body" ng-bind-html="post.body"</p>
+      <!--<div class="callout">
+        <ul class="menu simple">
+          <li><a href="#">Comments: 3</a></li>
+        </ul>
+      </div>-->
+    </div>
+  </div>
+
+  <footer class="row text-center">
+    <a href="https://github.com/11kyle?tab=repositories"><img src="img/github.svg" alt="github" height="48" width="48"></a>
+    <a href="http://www.linkedin.com/in/kylejohnson11"><img src="img/linkedin.svg" alt="linkedin" height="48" width="48"></a>
+    <p>&copy; 2017 Kyle Johnson.</p>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>
+      $(document).foundation();
+      </script>
+  <script type="text/javascript" src="https://intercom.zurb.com/scripts/zcom.js"></script>
+</body>
+</html>
